@@ -107,9 +107,16 @@ a {
    ========================= */
 
 .theme-toggle {
-    position: absolute;
+    /* keep the checkbox in DOM before .site so the sibling selector works,
+       but visually hide it off-screen to prevent browsers from scrolling
+       to it when it receives focus via the label click */
+    position: fixed;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
     opacity: 0;
-    pointer-events: none;
 }
 
 .theme-button {
@@ -326,4 +333,45 @@ h1 span {
 .social-links a:hover {
     color: var(--accent);
 }
+
+
+/* =========================
+   Section
+   ========================= */
+
+.section {
+    padding-block: 35px;
+    border-top: 1px solid var(--border);
+}
+
+.section-heading {
+    margin-bottom: 42px;
+}
+
+.section-title {
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    margin-bottom: 14px;
+}
+
+.section-heading h2,
+.contact-inner h2 {
+    max-width: 800px;
+    font-size: clamp(2rem, 4vw, 3.3rem);
+    line-height: 1.05;
+    letter-spacing: -0.05em;
+}
+
+
+/* =========================
+   ABOUT
+   ========================= */
+
+.p {
+    color: var(--muted);
+    font-size: 1.08rem;
+}
+
 
