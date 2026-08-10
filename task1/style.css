@@ -160,7 +160,7 @@ a {
 
 
 /* =========================
-   HERO
+   HERO - image
    ========================= */
 .hero {
     position: relative;
@@ -221,6 +221,10 @@ a {
 
 }
 
+/* =========================
+   HERO - Titles
+   ========================= */
+
 /* make headings/content flow below the hero box */
 .hero h1,
 .hero .hero-title,
@@ -242,7 +246,6 @@ section {
     0% {
         background-position: 0% 50%;
     }
-
     100% {
         background-position: 300% 50%;
     }
@@ -251,11 +254,8 @@ section {
 
 h1 {
     max-width: 800px;
-
     font-size: clamp(3rem, 7vw, 5.7rem);
-
     line-height: 0.98;
-
     letter-spacing: -0.065em;
 }
 
@@ -265,27 +265,21 @@ h1 span {
 
 .hero-title {
     margin-top: 20px;
-
     font-size: 1.25rem;
     font-weight: 700;
 }
 
 .hero-text {
     max-width: 650px;
-
     margin-top: 12px;
-
     color: var(--muted);
-
     font-size: 1.05rem;
 }
 
 .hero-actions {
     display: flex;
     gap: 12px;
-
     flex-wrap: wrap;
-
     margin-top: 30px;
 }
 
@@ -295,14 +289,10 @@ h1 span {
 
 .button {
     padding: 12px 20px;
-
     border-radius: 10px;
-
     font-weight: 700;
     font-size: 0.9rem;
-
     border: 1px solid var(--border);
-
     transition: 0.2s ease;
 }
 
@@ -323,11 +313,8 @@ h1 span {
 .social-links {
     display: flex;
     gap: 22px;
-
     margin-top: 26px;
-
     color: var(--muted);
-
     font-size: 0.9rem;
     font-weight: 700;
 }
