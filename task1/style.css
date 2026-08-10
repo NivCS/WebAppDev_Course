@@ -162,17 +162,61 @@ a {
 /* =========================
    HERO
    ========================= */
-
 .hero {
-    padding: 64px 0;
+    position: relative;
+    height: 500px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
-.hero-inner {
-    width: min(820px, calc(100% - 40px));
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Invisible box containing BOTH the image and line */
+.hero-character-box {
+    position: relative;
+    width: 420px;
+    height: 400px;
+    /* Center the box in the hero */
+    margin-top: 50px;
 }
+
+/* Character */
+.hero-character {
+    position: absolute;
+    width: 320px;
+    height: auto;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+
+/* Line */
+.hero-line {
+    position: absolute;
+    width: 420px;
+    height: 25px;
+    left: 0;
+    top: 270px;
+    background: linear-gradient(
+        90deg,
+        #6a5cff,
+        #00d4ff,
+        #ff4ecd,
+        #6a5cff
+    );
+    background-size: 300% 100%;
+    animation: gradientMove 4s linear infinite;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 300% 50%;
+    }
+} 
