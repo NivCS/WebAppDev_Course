@@ -370,9 +370,10 @@ h1 span {
    ABOUT
    ========================= */
 
-.p {
+.section-content {
     color: var(--muted);
     font-size: 1.08rem;
+    margin-left: 20px;
 }
 
 
