@@ -5,7 +5,7 @@
     --border: #dfe4ec;
     --accent: #4f46e5;
     --surface: #ffffff;
-    --navbar: #64748b52;
+    --navbar: #a1a5ac;
 }
 
 
@@ -151,8 +151,179 @@ a {
 .theme-toggle:checked ~ .site {
     --bg: #0b1020;
     --text: #f8fafc;
-    --muted: #9aa8bf;
+    --muted: #7c8391;
     --border: #293650;
-    --accent: #818cf8;
+    --accent: #4f46e5;
     --surface: #0f1724;
+    --navbar: #293650;
 }
+
+
+/* =========================
+   HERO - image
+   ========================= */
+.hero {
+    position: relative;
+    /* allow hero to grow to contain image + text */
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+/* Invisible box containing BOTH the image and line */
+.hero-character-box {
+    position: relative;
+    width: 420px;
+    height: 300px;
+    /* keep the box centered and separated from text */
+    margin: 0 auto 22px;
+}
+
+/* Character */
+.hero-character {
+    position: absolute;
+    width: 320px;
+    height: auto;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+
+/* Line */
+.hero-line {
+    position: absolute;
+    width: 420px;
+    height: 25px;
+    left: 0;
+    top: 270px;
+    background: var(--accent);
+    background-size: 300% 100%;
+    animation: gradientMove 4s linear infinite;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.theme-toggle:checked ~ .site .hero .hero-line {
+    background: linear-gradient(
+        90deg,
+        #6a5cff,
+        #00d4ff,
+        #ff4ecd,
+        #6a5cff
+    );
+    background-size: 300% 100%;
+    animation: gradientMove 4s linear infinite;
+    border-radius: 50%;
+
+}
+
+/* =========================
+   HERO - Titles
+   ========================= */
+
+/* make headings/content flow below the hero box */
+.hero h1,
+.hero .hero-title,
+.hero .hero-text,
+.hero .hero-actions,
+.hero .social-links {
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* give the page sections an anchor-safe offset for sticky nav */
+section {
+    scroll-margin-top: 96px;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 300% 50%;
+    }
+} 
+
+
+h1 {
+    max-width: 800px;
+    font-size: clamp(3rem, 7vw, 5.7rem);
+    line-height: 0.98;
+    letter-spacing: -0.065em;
+}
+
+h1 span {
+    color: var(--accent);
+}
+
+.hero-title {
+    margin-top: 20px;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.hero-text {
+    max-width: 650px;
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.hero-actions {
+    justify-content: center;
+}
+
+.button {
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: 1px solid var(--border);
+    transition: 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button.primary {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+.button.secondary {
+    background: var(--surface);
+}
+
+.social-links {
+    display: flex;
+    gap: 22px;
+    margin-top: 26px;
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.social-links {
+    justify-content: center;
+}
+
+.social-links a:hover {
+    color: var(--accent);
+}
+
