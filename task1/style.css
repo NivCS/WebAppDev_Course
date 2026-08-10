@@ -5,7 +5,7 @@
     --border: #dfe4ec;
     --accent: #4f46e5;
     --surface: #ffffff;
-    --navbar: #64748b52;
+    --navbar: #a1a5ac;
 }
 
 
@@ -151,8 +151,28 @@ a {
 .theme-toggle:checked ~ .site {
     --bg: #0b1020;
     --text: #f8fafc;
-    --muted: #9aa8bf;
+    --muted: #7c8391;
     --border: #293650;
-    --accent: #818cf8;
+    --accent: #4f46e5;
     --surface: #0f1724;
+    --navbar: #293650;
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+    padding: 64px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-inner {
+    width: min(820px, calc(100% - 40px));
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
