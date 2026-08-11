@@ -6,6 +6,7 @@
     --accent: #4f46e5;
     --surface: #ffffff;
     --navbar: #a1a5ac;
+    --footer: #e6e6e994;
 }
 
 
@@ -163,6 +164,7 @@ a {
     --accent: #4f46e5;
     --surface: #0f1724;
     --navbar: #293650;
+    --footer: #111933d5;
 }
 
 
@@ -815,4 +817,20 @@ h1 span {
     color: var(--text);
     font-size: 1rem;
     font-weight: 500;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+    min-height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    color: var(--muted);
+    font-size: 0.75rem;
+    background: var(--footer);
 }
