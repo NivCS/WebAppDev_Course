@@ -179,6 +179,196 @@
                     </div>
                 </div>
             </section>
+
+            <section class="section container" id="projects">
+                <div class="section-heading">
+                    <p class="section-title">
+                        03 - Projects
+                    </p>
+                    <h2>
+                        Things I've Built
+                    </h2>
+                </div>
+
+                <!-- project selectors -->
+                <input type="radio" name="project" id="project-1" checked>
+                <input type="radio" name="project" id="project-2">
+                <input type="radio" name="project" id="project-3">
+
+                <div class="terminal">
+                    <!-- Terminal top bar -->
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <p>niv@portfolio: ~/projects</p>
+                    </div>
+                    <!-- Terminal body -->
+                    <div class="terminal-body">
+                        <!-- ls command -->
+                        <div class="terminal-line">
+                            <span class="prompt">niv@portfolio</span>:<span class="path">~/projects</span>$ ls
+                        </div>
+                        <!-- Project list -->
+                        <div class="project-list">
+                            <label for="project-1" class="project-button">
+                                <span class="file-permissions">
+                                    drwxr-xr-x
+                                </span>
+                                <span class="folder-icon">
+                                    📁
+                                </span>
+                                <span class="project-name">
+                                    cloud-visualizer/
+                                </span>
+                            </label>
+                            <label for="project-2" class="project-button">
+                                <span class="file-permissions">
+                                    drwxr-xr-x
+                                </span>
+                                <span class="folder-icon">
+                                    📁
+                                </span>
+                                <span class="project-name">
+                                    azure-avd-deployer/
+                                </span>
+                            </label>
+                            <label for="project-3" class="project-button">
+                                <span class="file-permissions">
+                                    drwxr-xr-x
+                                </span>
+                                <span class="folder-icon">
+                                    📁
+                                </span>
+                                <span class="project-name">
+                                    email-notifyer/
+                                </span>
+                            </label>
+                        </div>
+                        <!-- =========================
+                            PROJECT 1 COMMAND
+                            ========================= -->
+                        <div class="selected-command command-1">
+                            <span class="prompt">niv@portfolio</span>:<span class="path">~/projects</span>$ cd
+                            <span class="command-project">cloud-visualizer</span>
+                        </div>
+                        <!-- =========================
+                            PROJECT 2 COMMAND
+                            ========================= -->
+                        <div class="selected-command command-2">
+                            <span class="prompt">niv@portfolio</span>:<span class="path">~/projects</span>$ cd
+                            <span class="command-project">azure-avd-deployer</span>
+                        </div>
+                        <!-- =========================
+                            PROJECT 3 COMMAND
+                            ========================= -->
+                        <div class="selected-command command-3">
+                            <span class="prompt">niv@portfolio</span>:<span class="path">~/projects</span>$ cd
+                            <span class="command-project">email-notifyer</span>
+                        </div>
+                        <span class="prompt">niv@portfolio</span>:<span class="path">~/projects</span>$ cat README.md
+                        <!-- =========================
+                            PROJECT 1
+                            ========================= -->
+                        <div class="project-preview preview-1">
+                            <div class="preview-header">
+                                <span>
+                                    README.md
+                                </span>
+                                <span>
+                                    cloud-visualizer
+                                </span>
+                            </div>
+                            <div class="preview-content">
+                                <div class="project-info">
+                                    <h3>
+                                        Cloud Infrastructure Visualizer
+                                    </h3>
+                                    <p>
+                                        A dynamic, interactive visualization that reveals your cloud infrastructure, 
+                                        its resources, and the network relationships connecting them.
+                                    </p>
+                                    <div class="project-tech">
+                                        <span>Azure</span>
+                                        <span>Terraform</span>
+                                        <span>Python</span>
+                                        <span>React</span>
+                                        <span>Kubernetes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- =========================
+                            PROJECT 2
+                            ========================= -->
+                        <div class="project-preview preview-2">
+                            <div class="preview-header">
+                                <span>
+                                    README.md
+                                </span>
+                                <span>
+                                    azure-avd-deployer
+                                </span>
+                            </div>
+                            <div class="preview-content">
+                                <div class="project-info">
+                                    <h3>
+                                        Azure AVD Auto Deployer
+                                    </h3>
+                                    <p>
+                                        An automated workflow that deploys and scales Azure AVD virtual machines
+                                        based on user capacity, designed to optimize costs and enhance security.
+                                    </p>
+                                    <div class="project-tech">
+                                        <span>Azure</span>
+                                        <span>Python</span>
+                                        <span>Terraform</span>
+                                        <span>CI/CD</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- =========================
+                            PROJECT 3
+                            ========================= -->
+                        <div class="project-preview preview-3">
+                            <div class="preview-header">
+                                <span>
+                                    README.md
+                                </span>
+                                <span>
+                                    email-notifyer
+                                </span>
+                            </div>
+                            <div class="preview-content">
+                                <div class="project-info">
+                                    <h3>
+                                        Email Notifyer
+                                    </h3>
+                                    <p>
+                                        An automated notification mechanism that detects incoming emails and appointments,
+                                        designed to protect and transition an internet facing company mailbox
+                                        into a secured environment.
+                                    </p>
+                                    <div class="project-tech">
+                                        <span>PowerShell</span>
+                                        <span>NIFI</span>
+                                        <span>Exchange</span>
+                                        <span>Azure-CLI</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Bottom terminal -->
+                        <div class="terminal-cursor">
+                            <span class="prompt">niv@portfolio</span>:<span class="path">~/projects</span>$
+                            <span class="cursor"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
     </div>
 </body>

@@ -344,6 +344,11 @@ h1 span {
     border-top: 1px solid var(--border);
 }
 
+.section > input {
+    display: none;
+}
+
+
 .section-heading {
     margin-bottom: 42px;
     margin-left: 20px;
@@ -450,3 +455,317 @@ h1 span {
 }
 
 
+/* =========================================
+   PROJECTS SECTION
+   ========================================= */
+
+/* Terminal window */
+.terminal {
+    width: 90%;
+    max-width: 1100px;
+    margin: 60px auto 0;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #0b0d0f;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* Terminal header */
+.terminal-header {
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: #111416;
+}
+
+.terminal-header p {
+    margin: 0;
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+    color: #777;
+}
+
+/* Terminal buttons */
+.terminal-buttons {
+    position: absolute;
+    left: 15px;
+    display: flex;
+    gap: 7px;
+}
+
+.terminal-buttons span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #555;
+}
+
+/* Terminal body */
+.terminal-body {
+    padding: 35px;
+    font-family: "Courier New", monospace;
+    font-size: 15px;
+    color: #d4d4d4;
+}
+
+
+/*terminal lines*/
+.terminal-line {
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.prompt {
+    color: #7dd3fc;
+}
+
+.path {
+    color: #a7f3d0;
+}
+
+/*project list*/
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 20px 0 30px;
+}
+
+/*project buttons*/
+.project-button {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    padding: 5px 8px;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    text-align: left;
+    color: #d4d4d4;
+    border-radius: 4px;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.file-permissions {
+    color: #666;
+    margin-right: 18px;
+}
+
+.folder-icon {
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.project-name {
+    color: #93c5fd;
+    transition: color 0.2s ease;
+}
+
+.project-button:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.project-button:hover .project-name {
+    color: white;
+}
+
+/*selected project*/
+#project-1:checked ~ .terminal
+.project-button[for="project-1"] {
+    background: rgba(147, 197, 253, 0.08);
+}
+
+#project-1:checked ~ .terminal
+.project-button[for="project-1"] .project-name {
+    color: white;
+}
+
+#project-2:checked ~ .terminal
+.project-button[for="project-2"] {
+    background: rgba(147, 197, 253, 0.08);
+}
+
+#project-2:checked ~ .terminal
+.project-button[for="project-2"] .project-name {
+    color: white;
+}
+
+#project-3:checked ~ .terminal
+.project-button[for="project-3"] {
+    background: rgba(147, 197, 253, 0.08);
+}
+
+#project-3:checked ~ .terminal
+.project-button[for="project-3"] .project-name {
+    color: white;
+}
+
+/*select command*/
+.selected-command {
+    display: none;
+    margin: 25px 0 20px;
+    line-height: 1.7;
+}
+
+.command-project {
+    color: #f0abfc;
+}
+
+#project-1:checked ~ .terminal .command-1 {
+    display: block;
+}
+
+#project-2:checked ~ .terminal .command-2 {
+    display: block;
+}
+
+#project-3:checked ~ .terminal .command-3 {
+    display: block;
+}
+
+/*project preview*/
+.project-preview {
+    display: none;
+    margin: 30px 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #0f1214;
+}
+
+/* Show selected project */
+#project-1:checked ~ .terminal .preview-1 {
+    display: block;
+}
+
+#project-2:checked ~ .terminal .preview-2 {
+    display: block;
+}
+
+#project-3:checked ~ .terminal .preview-3 {
+    display: block;
+}
+
+/*readme header*/
+.preview-header {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: #111416;
+    color: #777;
+    font-size: 12px;
+}
+
+.preview-header span:last-child {
+    color: #555;
+}
+
+/*project content*/
+.preview-content {
+    padding: 30px;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+/*project info*/
+.project-info h3 {
+    margin: 0 0 15px;
+    font-family: "Courier New", monospace;
+    font-size: 24px;
+    color: white;
+}
+
+.project-info p {
+    margin: 0;
+    line-height: 1.7;
+    color: #999;
+}
+
+/*technologies used*/
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 25px;
+}
+
+.project-tech span {
+    padding: 6px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 4px;
+    font-size: 12px;
+    color: #aaa;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/*cursor animation*/
+.terminal-cursor {
+    margin-top: 30px;
+    line-height: 1.7;
+}
+
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 17px;
+    margin-left: 5px;
+    vertical-align: middle;
+    background: #d4d4d4;
+    animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+    0%,
+    50% {
+        opacity: 1;
+    }
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+/* mobile */
+
+@media (max-width: 700px) {
+    .terminal {
+        width: 94%;
+    }
+
+    .terminal-body {
+        padding: 20px;
+
+        font-size: 12px;
+    }
+
+    .file-permissions {
+        display: none;
+    }
+
+    .preview-content {
+        flex-direction: column;
+        gap: 25px;
+        padding: 20px;
+    }
+
+    .project-info h3 {
+        font-size: 20px;
+    }
+
+    .project-links {
+        gap: 15px;
+    }
+}
