@@ -675,8 +675,7 @@ h1 span {
 /*project content*/
 .preview-content {
     padding: 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     gap: 35px;
     align-items: center;
 }
@@ -757,7 +756,7 @@ h1 span {
     }
 
     .preview-content {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 25px;
         padding: 20px;
     }
