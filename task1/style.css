@@ -201,7 +201,6 @@ a {
     z-index: 2;
 }
 
-
 /* Line */
 .hero-line {
     position: absolute;
@@ -379,7 +378,7 @@ h1 span {
 
 .section-content {
     color: var(--muted);
-    font-size: 1.08rem;
+    font-size: 1.3rem;
     margin-left: 20px;
 }
 
@@ -740,38 +739,6 @@ h1 span {
     }
 }
 
-/* mobile */
-
-@media (max-width: 700px) {
-    .terminal {
-        width: 94%;
-    }
-
-    .terminal-body {
-        padding: 20px;
-
-        font-size: 12px;
-    }
-
-    .file-permissions {
-        display: none;
-    }
-
-    .preview-content {
-        flex-direction: column;
-        gap: 25px;
-        padding: 20px;
-    }
-
-    .project-info h3 {
-        font-size: 20px;
-    }
-
-    .project-links {
-        gap: 15px;
-    }
-}
-
 /* =========================
    CONTACT
    ========================= */
@@ -833,4 +800,110 @@ h1 span {
     color: var(--muted);
     font-size: 0.75rem;
     background: var(--footer);
+}
+
+
+
+/* =========================
+   Responsive
+   ========================= */
+
+/* Responsive: consolidated breakpoints and focused adjustments
+   - Tablet (<=900px): moderate scale down and layout tweaks
+   - Mobile (<=680px): stack hero, hide nav, scale logos
+   - Small mobile (<=420px): further size reductions */
+
+@media (max-width: 900px) {
+    .container,
+    .navbar {
+        width: min(100% - 28px, 1120px);
+    }
+
+    .navbar {
+        min-height: 70px;
+        gap: 20px;
+    }
+
+    .logo { left: 16px; font-size: 1.1rem; }
+    .theme-button { right: 16px; }
+
+    /* Hero adjustments */
+    .hero { min-height: 420px; padding-top: 18px; }
+    .hero-character-box { width: 360px; height: 260px; margin-bottom: 18px; }
+    .hero-character { width: 280px;}
+    .hero-line { width: 360px; top: 230px; height: 20px; }
+
+    .skills-grid { grid-template-columns: repeat(2, 1fr); }
+    .projects-grid { grid-template-columns: 1fr; }
+}
+
+/* Position hero image so its bottom aligns with the decorative line */
+.hero-character {
+    top: auto; /* override earlier top positioning */
+    left: 50%;
+    bottom: -1rem; /* lower image slightly on regular screens */
+    transform: translateX(-50%);
+}
+
+/* ensure container utility exists and prevent horizontal scroll on small viewports */
+.container { box-sizing: border-box; width: 100%;  margin-inline: auto; padding-inline: 0; }
+
+
+@media (max-width: 680px) {
+    .container,
+    .navbar { width: min(100% - 20px, 1120px); }
+
+    /* prevent side-to-side scrolling on narrow devices */
+    html, body, .site { overflow-x: hidden; }
+
+    .navbar nav { display: none; }
+    .logo { left: 14px; }
+    .theme-button { right: 14px; }
+
+    /* stack hero vertically */
+    .hero { min-height: auto; padding-block: 65px 80px; text-align: center; }
+    .hero-character-box { width: 260px; height: 220px; margin: 0 auto 18px; }
+    .hero-character { width: 200px;}
+    .hero-line { width: 260px; top: 200px; height: 18px; }
+    .hero-character { bottom: -0.6rem; }
+
+    .hero-title { font-size: 1.05rem; }
+    .hero-text { font-size: 0.95rem; }
+
+    .skills-grid { grid-template-columns: 1fr 1fr; }
+    .skill-card { min-height: 115px; padding: 18px; }
+    .skill-item { width: 100px; gap: 12px; }
+    .skill-item img { width: 56px; height: 56px; }
+
+    .project-card { min-height: 320px; }
+
+    .contact-links {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .contact-links a {
+        min-height: auto;
+        padding: 18px 16px;
+    }
+
+    .contact-links strong {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+        font-size: 0.95rem;
+    }
+
+    .footer { padding-block: 25px; gap: 8px; text-align: center; }
+}
+
+@media (max-width: 420px) {
+    .skills-grid { grid-template-columns: 1fr; }
+    h1 { font-size: 2.9rem; }
+
+    .hero-character-box { width: 220px; height: 180px; }
+    .hero-character { width: 160px; }
+    .hero-line { width: 220px; top: 150px; height: 14px; }
+    .hero-character { bottom: 6px; }
+    .skill-item { width: 92px; }
+    .skill-item img { width: 48px; height: 48px; }
 }
