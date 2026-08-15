@@ -877,6 +877,22 @@ h1 span {
 
     .project-card { min-height: 320px; }
 
+    .contact-links {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .contact-links a {
+        min-height: auto;
+        padding: 18px 16px;
+    }
+
+    .contact-links strong {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+        font-size: 0.95rem;
+    }
+
     .footer { padding-block: 25px; gap: 8px; text-align: center; }
 }
 
